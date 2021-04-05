@@ -1,0 +1,64 @@
+Note:Please refer 10th and 11th class trignometry before reading further
+
+    Identities used for making these program
+    [1] sin(x)^2+cos(x)^2 = 1
+    [2] sin(2x) = 2.sin(x).cos(x)
+    [3] sin(x+y) = sin(x).cos(y) + cos(x).sin(y)
+    [4] cos(x+y) = cos(x).cos(y) - sin(x).sin(y)
+    [5] sin(x-y) = sin(x).cos(y)-sin(y).cos(x)
+    [6] cos(x-y) = cos(x).cos(y)+sin(x).sin(y)
+    [7] sin(x/2) = √((1 - cos(x))/2)
+
+
+First We calculate sin(15) as follows
+sin(45-30) = sin(45).cos(30) - sin(30).cos(45) = 0.258819045
+[Notice sin(45),sin(30),cos(45) and cos(30) is derived in class X Maths]
+
+Now cos(15) can be calculated using identity [1]
+cos(15) = √{1-sin(15).sin(15)} = 0.965925826
+
+
+sin(x/2) = √{(1-cos(x))/2}
+Prove:
+    (1)=> sin(x/2 + x/2) = 2.sin(x/2).cos(x/2) [Using Identity[3] ]
+
+    (2)=> cos(x - x/2) = cos(x).cos(x/2) + sin(x).sin(x/2) [Using Identity[6]]
+    (2)=> cos(x/2) = cos(x).cos(x/2) + sin(x).sin(x/2)
+    (2)=> cos(x/2)(1-cos(x)) = sin(x).sin(x/2)
+    (2)=> cos(x/2) = sin(x).sin(x/2) / (1 - cos(x))
+    
+    Now Putting cos(x/2) from (2) into equation (1) we get
+
+    sin(x/2 + x/2) = 2.sin(x/2).sin(x/2).sin(x)/( 1 - cos(x))
+    sin(x) = 2.sin(x/2).sin(x/2).sin(x)/( 1 - cos(x))
+    1 = 2.sin(x/2).sin(x/2)/( 1 - cos(x))
+    1 - cos(x) = 2.sin(x/2).sin(x/2)
+    sin(x/2) = √((1 - cos(x))/2)
+
+Now cos(x/2) can be calculated using identity [1]
+cos(x/2) = √{1-sin(x/2)^2}
+
+
+
+Now Let's move on to the algorithm that i use for finding sin(x)
+
+I first broken the x like this 15y1 + 15y2 + 15y3 ....
+
+Example 77deg => 15(5) + 15(1/8) .... such that it is almost equal to 77 deg
+Example 87deg => 15(5) + 15(1/2) + 15(1/4) .... such that it is almost equal to 82deg
+
+    Now If you look identity [3] you can easily see that sin(15x) can be easily calculated  like this.
+    Example sin(15*5) can be calculated like this
+
+    sin(0+15) = sin(0).cos(15) + cos(0).sin(15)
+    sin(15+15) = sin(15).cos(15) + cos(15).sin(15)
+    sin(30+15) = sin(30).cos(15) + cos(30).sin(15)
+    sin(45+15) = sin(45).cos(15) + cos(45).sin(15)
+    sin(60+15) = sin(60).cos(15) + cos(60).sin(15)
+
+    Then sin(15/2) and cos(15/2) can be calculated using identity [7]
+    then sin(75+15/2) = sin(75).cos(15/2) + cos(75).sin(15/2)
+
+    And then sin(82.5+15/4) = sin(82.5).cos(15/4) + cos(82.5).sin(15/4)
+
+    Doing this process till i reach the end

@@ -1,11 +1,21 @@
-Assumptions: % as modulo not as percentage
+<h3> This is a simple program for calculating sin of any angle<h3> <br>
 
->> Calculate sin(15) as sin(30/2) = sin(30).cos(30).1/2
+<h1>Output Of the Program</h1>
 
->> Calculate A' such that A-A' < 0.01 and A' = 15(x1) + 15(x2) + 15(x3) .....
-    [Note x1,x2,x3... can be fraction and x1 > x2 > x3 .....]
+![Alt text](./screenshot.png?raw=true "ScreenShot")
 
->> Now sin(x1+x2+x3.....) can be determined by this pseudocode
-    F = x1
-    while(x not end):
-        F = sin(F+x(i+1)) = sin(F).cos(x(i+1)) + sin(x(i+1)).cos(F)
+<hr>
+<h4>
+
+*In the main.cpp I have writted the code and in algorithm.txt i have added the algorithm for my future self.*
+</h4>
+
+<h1>
+Code is written by
+</h1>
+
+**Name: Nikhil Raj Pandey<br>Age: 15 Years**
+
+<hr>
+
+*Please don't forget to start this repo because as it taked me 3 days to build is project.*
