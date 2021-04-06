@@ -14,4 +14,4 @@ Code is written by
 
 <hr>
 
-*Please don't forget to start this repo because as it taked me 3 days to build is project.*
+*Please don't forget to star this repository because as it taked me 3 days to build is project.*
